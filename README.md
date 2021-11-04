@@ -30,9 +30,9 @@ _Luego_
 
 _se debe ejecutar el segundo comando para instalar todas dependencias de angular fire_
 ```
-npm install @angular/fire firebase --save (consultar documentacion https://github.com/angular/angularfire para instalar en ionic consultar la opcion Installation and Setup with Ionic CLI)
+npm install @angular/fire firebase --save
  ```
-
+ _(consultar documentacion https://github.com/angular/angularfire para instalar en ionic consultar la opcion [Installation and Setup with Ionic CLI)](https://github.com/angular/angularfire/blob/master/docs/ionic/cli.md)_
 
 
 ## Conexion a base de datos ⚙️
