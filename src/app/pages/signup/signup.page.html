@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">nombre </ion-label>
+      <ion-input type="text"
+                 [(ngModel)]='displayName'
+                 name= 'displayName' >
+      </ion-input>
+    </ion-item>
+
+      <ion-item>
+        <ion-label>Pais</ion-label>
+        <ion-select placeholder= "Selecciona uno" 
+                    interface="action-sheet" type="option"
+                    [(ngModel)]='pais' name= 'pais'>
+                    
+          <ion-select-option>Argentina</ion-select-option>
+          <ion-select-option>Bolivia</ion-select-option>
+          <ion-select-option>Brasil</ion-select-option>
+          <ion-select-option>Chile</ion-select-option>
+          <ion-select-option>Colombia</ion-select-option>
+          <ion-select-option>Costa Rica</ion-select-option>
+          <ion-select-option>Cuba</ion-select-option>
+          <ion-select-option>Ecuador</ion-select-option>
+          <ion-select-option>El Salvador</ion-select-option>
+          <ion-select-option>Guayana Francesa</ion-select-option>
+          <ion-select-option>Granada</ion-select-option>
+          <ion-select-option>Guatemala</ion-select-option>
+          <ion-select-option>Guayana</ion-select-option>
+          <ion-select-option>Haití</ion-select-option>
+          <ion-select-option>Honduras</ion-select-option>
+          <ion-select-option>Jamaica</ion-select-option>
+          <ion-select-option>México</ion-select-option>
+          <ion-select-option>Nicaragua</ion-select-option>
+          <ion-select-option>Paraguay</ion-select-option>
+          <ion-select-option>Panamá</ion-select-option>
+          <ion-select-option>Perú</ion-select-option>
+          <ion-select-option>Puerto Rico</ion-select-option>
+          <ion-select-option>República Dominicana</ion-select-option>
+          <ion-select-option>Surinam</ion-select-option>
+          <ion-select-option>Uruguay</ion-select-option>
+          <ion-select-option>Venezuela</ion-select-option>
+          
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-select position='floating' placeholder="Seleccione uno" name="sexo"  required [(ngModel)]= 'sexo'>
+          <ion-select-option value="Femenino">Mujer</ion-select-option>
+          <ion-select-option value="Masculino">Hombre</ion-select-option>
+          <ion-select-option value="No-Binario">No-Binario</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]='email' name= 'email' pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]='password'name= 'password' required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit"  (click)= "signup()" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+
+
+  </form>
+  <ion-row>
+    <ion-col>
+      <p>
+        <a routerLink="/login">Ya tienes una cuenta? </a>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-content>
